@@ -1,2 +1,2 @@
-print("Hello appsec world")
-print("Hello from python2 style")
+name = input("Enter your name: ")
+print("Hello appsec world from @" + name)
