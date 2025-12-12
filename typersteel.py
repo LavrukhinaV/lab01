@@ -1,6 +1,6 @@
 import typer
 
-# CLI entrypoint is defined via typer.run(main)
+# CLI entrypoint (updated on master) is defined via typer.run(main)
 
 # main\(\) defines CLI arguments and options\ndef main(
     name: str,
