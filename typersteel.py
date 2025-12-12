@@ -1,6 +1,8 @@
 import typer
 
-def main(
+# CLI entrypoint is defined via typer.run(main)
+
+# main\(\) defines CLI arguments and options\ndef main(
     name: str,
     lastname: str = typer.Option("", help="Фамилия пользователя."),
     formal: bool = typer.Option(False, "--formal", "-f", help="Использовать формальное приветствие."),
