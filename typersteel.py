@@ -1,19 +1,20 @@
 import typer
 
-# CLI entrypoint (updated on master) is defined via typer.run(main)
+# CLI entrypoint is defined via typer.run(main)
 
-# main\(\) defines CLI arguments and options\ndef main(
+
+def main(
     name: str,
     lastname: str = typer.Option("", help="Фамилия пользователя."),
     formal: bool = typer.Option(False, "--formal", "-f", help="Использовать формальное приветствие."),
-):
-    """
-    Говорит "Привет" пользователю, опционально используя фамилию и формальный стиль.
-    """
+) -> None:
+    """Говорит 'Привет' пользователю, опционально используя фамилию и формальный стиль."""
     if formal:
-        print(f"Добрый день, {name} {lastname}!")
-    else:
-        print(f"Привет, {name}!")
+        typer.echo(f"Добрый день, {name} {lastname}!")
+        return
+
+    typer.echo(f"Привет, {name}!")
+
 
 if __name__ == "__main__":
     typer.run(main)
